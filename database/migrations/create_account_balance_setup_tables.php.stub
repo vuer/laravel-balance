@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateAccountBalanceSetupTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('account_balances', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->char('currency', 3);
+            $table->morphs('holder');
+            $table->decimal('balance', 20, 2)->default(0);
+            $table->timestamps();
+        });
+
+        Schema::create('account_balance_transactions', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->bigInteger('account_balance_id')->unsigned();
+            $table->foreign('account_balance_id')->references('id')->on('account_balances');
+            $table->decimal('amount', 20, 2)->default(0);
+            $table->integer('type')->unsigned()->nullable();
+            $table->timestamp('created_at');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('account_balance_transactions');
+        Schema::dropIfExists('account_balances');
+    }
+}

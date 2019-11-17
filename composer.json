@@ -1,0 +1,22 @@
+{
+    "name": "vuer/laravel-balance",
+    "description": "Laravel package that provide account balance and transactions functionality for Laravel 5",
+    "keywords": ["vuer","laravel","balance","account","accounting"],
+    "authors": [
+        {
+            "name": "Rafał Szymański",
+            "email": "vuer@post.pl"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2.9",
+        "moneyphp/money": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vuer\\LaravelBalance\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
