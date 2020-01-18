@@ -16,7 +16,7 @@ class BalanceServiceProvider extends ServiceProvider
         $timestamp = date('Y_m_d_His', time());
 
         $this->publishes([
-            __DIR__ . '/../database/migrations/create_account_balance_setup_tables.php.stub' => app()->basePath() . '/migrations/' . $timestamp . '_create_account_balance_setup_tables.php',
+            __DIR__ . '/../database/migrations/create_account_balance_setup_tables.php.stub' => app()->basePath() . '/database/migrations/' . $timestamp . '_create_account_balance_setup_tables.php',
         ], 'migrations');
 
         $this->publishes([
