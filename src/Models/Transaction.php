@@ -34,7 +34,7 @@ class Transaction extends Model
 
     public function getAmount(): Money
     {
-        return new Money((float)$this->amount, $this->getAccountBalance()->getCurrency());
+        return new Money((int)$this->amount, $this->getAccountBalance()->getCurrency());
     }
 
     /**
