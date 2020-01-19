@@ -109,3 +109,4 @@ To add 100 EUR to your balance:
 $account = $this->accountant->getAccount($user, new \Money\Currency('EUR'));
 $transaction = $this->transactionProcessor->create($account, new \Vuer\LaravelBalance\Dto\TransactionDto(100));
 ```
+Only integers allowed, so then if you want to place decimals then consider storing 1 USD as 100.
