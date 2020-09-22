@@ -23,6 +23,9 @@ class Transaction extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
+        if (!$this->created_at) {
+            $this->created_at = (new \DateTime())->format('Y-m-d H:i:s');
+        }
         $this->table = Config::get('vuer-account-balance.account_balance_transactions_table');
     }
 
