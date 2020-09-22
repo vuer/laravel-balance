@@ -1,4 +1,4 @@
-# Laravel Balance (Laravel 5 Package)
+# Laravel Balance
 
 [![Latest Stable Version](https://poser.pugx.org/vuer/laravel-balance/v/stable)](https://packagist.org/packages/vuer/laravel-balance) [![Total Downloads](https://poser.pugx.org/vuer/laravel-balance/downloads)](https://packagist.org/packages/vuer/laravel-balance) [![Latest Unstable Version](https://poser.pugx.org/vuer/laravel-balance/v/unstable)](https://packagist.org/packages/vuer/laravel-balance) [![License](https://poser.pugx.org/vuer/laravel-balance/license)](https://packagist.org/packages/vuer/laravel-balance)
 
